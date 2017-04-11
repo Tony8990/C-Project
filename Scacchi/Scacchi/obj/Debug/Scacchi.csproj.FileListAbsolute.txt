@@ -1,0 +1,19 @@
+C:\Users\fuocos\Desktop\Scacchi\Scacchi\bin\Debug\Scacchi.exe.config
+C:\Users\Simone\Desktop\CSharpProjects\Scacchi\Scacchi\bin\Debug\Scacchi.exe.config
+C:\Users\Simone\Desktop\CSharpProjects\Scacchi\Scacchi\bin\Debug\Scacchi.exe
+C:\Users\Simone\Desktop\CSharpProjects\Scacchi\Scacchi\bin\Debug\Scacchi.pdb
+C:\Users\Simone\Desktop\CSharpProjects\Scacchi\Scacchi\obj\Debug\Scacchi.csprojResolveAssemblyReference.cache
+C:\Users\Simone\Desktop\CSharpProjects\Scacchi\Scacchi\obj\Debug\Scacchi.Form1.resources
+C:\Users\Simone\Desktop\CSharpProjects\Scacchi\Scacchi\obj\Debug\Scacchi.Properties.Resources.resources
+C:\Users\Simone\Desktop\CSharpProjects\Scacchi\Scacchi\obj\Debug\Scacchi.csproj.GenerateResource.Cache
+C:\Users\Simone\Desktop\CSharpProjects\Scacchi\Scacchi\obj\Debug\Scacchi.exe
+C:\Users\Simone\Desktop\CSharpProjects\Scacchi\Scacchi\obj\Debug\Scacchi.pdb
+C:\Users\Tony\Desktop\Esercizi Scuola\Scacchi\Scacchi\bin\Debug\Scacchi.exe.config
+C:\Users\Tony\Desktop\Esercizi Scuola\Scacchi\Scacchi\bin\Debug\Scacchi.exe
+C:\Users\Tony\Desktop\Esercizi Scuola\Scacchi\Scacchi\bin\Debug\Scacchi.pdb
+C:\Users\Tony\Desktop\Esercizi Scuola\Scacchi\Scacchi\obj\Debug\Scacchi.csprojResolveAssemblyReference.cache
+C:\Users\Tony\Desktop\Esercizi Scuola\Scacchi\Scacchi\obj\Debug\Scacchi.Form1.resources
+C:\Users\Tony\Desktop\Esercizi Scuola\Scacchi\Scacchi\obj\Debug\Scacchi.Properties.Resources.resources
+C:\Users\Tony\Desktop\Esercizi Scuola\Scacchi\Scacchi\obj\Debug\Scacchi.csproj.GenerateResource.Cache
+C:\Users\Tony\Desktop\Esercizi Scuola\Scacchi\Scacchi\obj\Debug\Scacchi.exe
+C:\Users\Tony\Desktop\Esercizi Scuola\Scacchi\Scacchi\obj\Debug\Scacchi.pdb
