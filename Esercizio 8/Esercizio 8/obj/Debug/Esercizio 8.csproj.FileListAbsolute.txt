@@ -1,0 +1,6 @@
+C:\Users\tony\Desktop\Progetti c#\Esercizio 8\Esercizio 8\bin\Debug\Esercizio 8.exe.config
+C:\Users\tony\Desktop\Progetti c#\Esercizio 8\Esercizio 8\bin\Debug\Esercizio 8.exe
+C:\Users\tony\Desktop\Progetti c#\Esercizio 8\Esercizio 8\bin\Debug\Esercizio 8.pdb
+C:\Users\tony\Desktop\Progetti c#\Esercizio 8\Esercizio 8\obj\Debug\Esercizio 8.exe
+C:\Users\tony\Desktop\Progetti c#\Esercizio 8\Esercizio 8\obj\Debug\Esercizio 8.pdb
+C:\Users\tony\Desktop\Progetti c#\Esercizio 8\Esercizio 8\obj\Debug\Esercizio 8.csprojResolveAssemblyReference.cache

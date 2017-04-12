@@ -1,0 +1,6 @@
+C:\Users\tony\Desktop\Progetti c#\esercizio 6_7\esercizio 6_7\bin\Debug\esercizio 6_7.exe.config
+C:\Users\tony\Desktop\Progetti c#\esercizio 6_7\esercizio 6_7\bin\Debug\esercizio 6_7.exe
+C:\Users\tony\Desktop\Progetti c#\esercizio 6_7\esercizio 6_7\bin\Debug\esercizio 6_7.pdb
+C:\Users\tony\Desktop\Progetti c#\esercizio 6_7\esercizio 6_7\obj\Debug\esercizio 6_7.exe
+C:\Users\tony\Desktop\Progetti c#\esercizio 6_7\esercizio 6_7\obj\Debug\esercizio 6_7.pdb
+C:\Users\tony\Desktop\Progetti c#\esercizio 6_7\esercizio 6_7\obj\Debug\esercizio 6_7.csprojResolveAssemblyReference.cache

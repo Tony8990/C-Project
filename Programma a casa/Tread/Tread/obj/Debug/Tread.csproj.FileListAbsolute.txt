@@ -1,0 +1,2 @@
+C:\Users\tony\Desktop\Progetti c#\Tread\Tread\bin\Debug\Tread.exe.config
+C:\Users\tony\Desktop\Progetti c#\Tread\Tread\bin\Debug\EsercizioTread.exe.config

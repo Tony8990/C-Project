@@ -1,0 +1,11 @@
+c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\bin\Debug\Traduttore Json.exe.config
+c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\bin\Debug\Traduttore Json.exe
+c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\bin\Debug\Traduttore Json.pdb
+c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\bin\Debug\Newtonsoft.Json.dll
+c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\bin\Debug\Newtonsoft.Json.xml
+c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\obj\Debug\Traduttore Json.csprojResolveAssemblyReference.cache
+c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\obj\Debug\Traduttore_Json.Form1.resources
+c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\obj\Debug\Traduttore_Json.Properties.Resources.resources
+c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\obj\Debug\Traduttore Json.csproj.GenerateResource.Cache
+c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\obj\Debug\Traduttore Json.exe
+c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\obj\Debug\Traduttore Json.pdb

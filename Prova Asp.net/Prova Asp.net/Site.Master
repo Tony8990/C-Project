@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Prova_Asp.net.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="it">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Applicazione ASP.NET</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server" style="height: 286px">
+        <div class="container body-content">
+            <asp:Label ID="Label1" runat="server" Text="Tony"></asp:Label>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="GOO!" />
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Applicazione ASP.NET</p>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>

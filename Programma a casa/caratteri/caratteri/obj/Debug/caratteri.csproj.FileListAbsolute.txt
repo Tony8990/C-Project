@@ -1,0 +1,6 @@
+C:\Users\tony\Desktop\Progetti c#\caratteri\caratteri\bin\Debug\caratteri.exe.config
+C:\Users\tony\Desktop\Progetti c#\caratteri\caratteri\obj\Debug\caratteri.csprojResolveAssemblyReference.cache
+C:\Users\tony\Desktop\Progetti c#\caratteri\caratteri\bin\Debug\caratteri.exe
+C:\Users\tony\Desktop\Progetti c#\caratteri\caratteri\bin\Debug\caratteri.pdb
+C:\Users\tony\Desktop\Progetti c#\caratteri\caratteri\obj\Debug\caratteri.exe
+C:\Users\tony\Desktop\Progetti c#\caratteri\caratteri\obj\Debug\caratteri.pdb
