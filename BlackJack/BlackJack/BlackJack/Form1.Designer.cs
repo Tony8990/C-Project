@@ -47,6 +47,10 @@
             this.lblPunteggio = new System.Windows.Forms.Label();
             this.lnlRisultato = new System.Windows.Forms.Label();
             this.lblRisultato = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblrisultatodelar = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblpuntedelare = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +83,7 @@
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
@@ -247,6 +251,50 @@
             this.lblRisultato.TabIndex = 12;
             this.lblRisultato.Text = "0";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(562, 135);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Dealear Call";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblrisultatodelar
+            // 
+            this.lblrisultatodelar.AutoSize = true;
+            this.lblrisultatodelar.BackColor = System.Drawing.Color.Transparent;
+            this.lblrisultatodelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblrisultatodelar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblrisultatodelar.Location = new System.Drawing.Point(421, 151);
+            this.lblrisultatodelar.Name = "lblrisultatodelar";
+            this.lblrisultatodelar.Size = new System.Drawing.Size(26, 29);
+            this.lblrisultatodelar.TabIndex = 16;
+            this.lblrisultatodelar.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(392, 150);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 29);
+            this.label2.TabIndex = 15;
+            // 
+            // lblpuntedelare
+            // 
+            this.lblpuntedelare.AutoSize = true;
+            this.lblpuntedelare.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpuntedelare.ForeColor = System.Drawing.Color.White;
+            this.lblpuntedelare.Location = new System.Drawing.Point(280, 156);
+            this.lblpuntedelare.Name = "lblpuntedelare";
+            this.lblpuntedelare.Size = new System.Drawing.Size(106, 25);
+            this.lblpuntedelare.TabIndex = 14;
+            this.lblpuntedelare.Text = "Punteggio:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +302,10 @@
             this.BackColor = System.Drawing.Color.Green;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(750, 376);
+            this.Controls.Add(this.lblrisultatodelar);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblpuntedelare);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblRisultato);
             this.Controls.Add(this.lnlRisultato);
             this.Controls.Add(this.lblPunteggio);
@@ -299,6 +351,10 @@
         private System.Windows.Forms.Label lblPunteggio;
         private System.Windows.Forms.Label lnlRisultato;
         private System.Windows.Forms.Label lblRisultato;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblrisultatodelar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblpuntedelare;
     }
 }
 
