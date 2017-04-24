@@ -12,10 +12,13 @@ namespace BlackJack
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1(string nome)
         {
+           
             InitializeComponent();
+            lblutente.Text = nome.ToString();
         }
+        
         Random mazzo = new Random();
         int mano=0,punteggioplayer,punteggiodelar;
         public int a1, a2, a3, a4;
@@ -59,23 +62,23 @@ namespace BlackJack
         private void button2_Click(object sender, EventArgs e)
         {
             mano = 0;
-            lblDealer1m.Text = "0";
-            lblDealer2m.Text = "0";
-            lblDealer3m.Text = "0";
-            lblDealer4m.Text = "0";
-            lblplayer1m.Text = "0";
-            lblplayer2m.Text = "0";
-            lblplayer3m.Text = "0";
-            lblplayer4m.Text = "0";
-            lblRisultato.Text = "0";
-            lblrisultatodelar.Text = "0";
+            ResetValue(lblDealer1m);
+            ResetValue(lblDealer2m);
+            ResetValue(lblDealer3m);
+            ResetValue(lblDealer4m);
+            ResetValue(lblplayer1m);
+            ResetValue(lblplayer2m);
+            ResetValue(lblplayer3m);
+            ResetValue(lblplayer4m);
+            ResetValue(lblpuntedelare);
+            ResetValue(lblRisultato);
+
             pictureBox7.ImageLocation = @"C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\Img\cartacoperta.png";
 
             pictureBox6.ImageLocation = @"C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\Img\cartacoperta.png";
         }
         public void Cambioimmagine()
         {
-            Random r = new Random();
             if (lblplayer1m.Text == "1")
             {
 
@@ -178,6 +181,14 @@ namespace BlackJack
             }
 
         }
+
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Landingpage a = new Landingpage();
+            a.Show();
+            this.Close();
+        }
+
         private void programmerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("By Fava Tony");
@@ -266,6 +277,10 @@ namespace BlackJack
         {
 
             this.Close();
+        }
+        public string ResetValue(Label a)
+        {
+            return a.Text="0";
         }
     }
 }

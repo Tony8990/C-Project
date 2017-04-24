@@ -7,3 +7,4 @@ C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\ob
 C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.GenerateResource.Cache
 C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.exe
 C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.pdb
+C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.Landingpage.resources
