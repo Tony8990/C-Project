@@ -64,6 +64,12 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblutente = new System.Windows.Forms.Label();
             this.lblpc = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.lblScoreUte = new System.Windows.Forms.Label();
+            this.lblpcsco = new System.Windows.Forms.Label();
+            this.lblmontUT = new System.Windows.Forms.Label();
+            this.lblmontePC = new System.Windows.Forms.Label();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -73,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -98,7 +105,7 @@
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
@@ -335,12 +342,13 @@
             this.btnrisult.BackColor = System.Drawing.Color.Red;
             this.btnrisult.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnrisult.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnrisult.Location = new System.Drawing.Point(33, 235);
+            this.btnrisult.Location = new System.Drawing.Point(611, 394);
             this.btnrisult.Name = "btnrisult";
             this.btnrisult.Size = new System.Drawing.Size(103, 33);
             this.btnrisult.TabIndex = 18;
-            this.btnrisult.Text = "Risultato";
+            this.btnrisult.Text = "Passo";
             this.btnrisult.UseVisualStyleBackColor = false;
+            this.btnrisult.Click += new System.EventHandler(this.btnrisult_Click);
             // 
             // pictureBox1
             // 
@@ -450,6 +458,72 @@
             this.lblpc.TabIndex = 28;
             this.lblpc.Text = "PC";
             // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.Color.Red;
+            this.lblScore.Location = new System.Drawing.Point(792, 46);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(77, 29);
+            this.lblScore.TabIndex = 29;
+            this.lblScore.Text = "Score";
+            // 
+            // lblScoreUte
+            // 
+            this.lblScoreUte.AutoSize = true;
+            this.lblScoreUte.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScoreUte.ForeColor = System.Drawing.Color.Red;
+            this.lblScoreUte.Location = new System.Drawing.Point(792, 144);
+            this.lblScoreUte.Name = "lblScoreUte";
+            this.lblScoreUte.Size = new System.Drawing.Size(77, 29);
+            this.lblScoreUte.TabIndex = 30;
+            this.lblScoreUte.Text = "Score";
+            // 
+            // lblpcsco
+            // 
+            this.lblpcsco.AutoSize = true;
+            this.lblpcsco.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpcsco.ForeColor = System.Drawing.Color.Red;
+            this.lblpcsco.Location = new System.Drawing.Point(955, 144);
+            this.lblpcsco.Name = "lblpcsco";
+            this.lblpcsco.Size = new System.Drawing.Size(81, 29);
+            this.lblpcsco.TabIndex = 31;
+            this.lblpcsco.Text = "Banco";
+            // 
+            // lblmontUT
+            // 
+            this.lblmontUT.AutoSize = true;
+            this.lblmontUT.BackColor = System.Drawing.Color.Transparent;
+            this.lblmontUT.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmontUT.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblmontUT.Location = new System.Drawing.Point(818, 197);
+            this.lblmontUT.Name = "lblmontUT";
+            this.lblmontUT.Size = new System.Drawing.Size(26, 29);
+            this.lblmontUT.TabIndex = 32;
+            this.lblmontUT.Text = "0";
+            // 
+            // lblmontePC
+            // 
+            this.lblmontePC.AutoSize = true;
+            this.lblmontePC.BackColor = System.Drawing.Color.Transparent;
+            this.lblmontePC.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmontePC.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblmontePC.Location = new System.Drawing.Point(985, 197);
+            this.lblmontePC.Name = "lblmontePC";
+            this.lblmontePC.Size = new System.Drawing.Size(26, 29);
+            this.lblmontePC.TabIndex = 33;
+            this.lblmontePC.Text = "0";
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(960, 433);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
+            this.axWindowsMediaPlayer1.TabIndex = 34;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,6 +531,12 @@
             this.BackColor = System.Drawing.Color.Green;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1072, 491);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.lblmontePC);
+            this.Controls.Add(this.lblmontUT);
+            this.Controls.Add(this.lblpcsco);
+            this.Controls.Add(this.lblScoreUte);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblpc);
             this.Controls.Add(this.lblutente);
             this.Controls.Add(this.pictureBox5);
@@ -500,6 +580,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -542,6 +623,12 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label lblutente;
         private System.Windows.Forms.Label lblpc;
+        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label lblScoreUte;
+        private System.Windows.Forms.Label lblpcsco;
+        private System.Windows.Forms.Label lblmontUT;
+        private System.Windows.Forms.Label lblmontePC;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }
 

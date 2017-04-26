@@ -8,3 +8,8 @@ C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\ob
 C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.exe
 C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.pdb
 C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.Landingpage.resources
+C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\bin\Debug\Interop.WMPLib.dll
+C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\Interop.WMPLib.dll
+C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.ResolveComReference.cache

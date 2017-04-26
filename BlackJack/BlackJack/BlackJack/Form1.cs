@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BlackJack
 {
     public partial class Form1 : Form
@@ -18,12 +19,13 @@ namespace BlackJack
             InitializeComponent();
             lblutente.Text = nome.ToString();
         }
-        
+               
         Random mazzo = new Random();
         int mano=0,punteggioplayer,punteggiodelar;
+        public int premiUt, premiPc;
         public int a1, a2, a3, a4;
         public int b1, b2, b3, b4;
-
+        public int risultatoPlay, risultatoPc;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -70,9 +72,10 @@ namespace BlackJack
             ResetValue(lblplayer2m);
             ResetValue(lblplayer3m);
             ResetValue(lblplayer4m);
-            ResetValue(lblpuntedelare);
+            ResetValue(lblrisultatodelar);
             ResetValue(lblRisultato);
-
+            button2.Enabled = true;
+            
             pictureBox7.ImageLocation = @"C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\Img\cartacoperta.png";
 
             pictureBox6.ImageLocation = @"C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\Img\cartacoperta.png";
@@ -82,7 +85,7 @@ namespace BlackJack
             if (lblplayer1m.Text == "1")
             {
 
-                pictureBox7.ImageLocation = @"Img\Cuori\1c.png";
+                pictureBox7.ImageLocation = @"C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\Img\Cuori\1c.png";
             }
             if (lblplayer1m.Text == "2")
             {
@@ -189,6 +192,37 @@ namespace BlackJack
             this.Close();
         }
 
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnrisult_Click(object sender, EventArgs e)
+        {
+           
+            risultatoPlay = Convert.ToInt32(lblRisultato.Text);
+            risultatoPc = Convert.ToInt32(lblrisultatodelar.Text);
+            if(risultatoPlay>risultatoPc && risultatoPlay < 22)
+            {
+                MessageBox.Show(lblutente.Text + " Hai Vinto");
+            }
+            if (risultatoPc > risultatoPlay && risultatoPc < 22)
+            {
+                MessageBox.Show(lblutente.Text + " Hai Perso");
+
+            }
+            if (risultatoPc > 21 || risultatoPlay > 21)
+            {
+                MessageBox.Show(lblutente.Text + " Hai Perso");
+
+            }
+            if (risultatoPc == risultatoPlay && risultatoPc <= 21 && risultatoPlay >= 21)
+            {
+                MessageBox.Show("Pareggio");
+            }
+            
+        }
+
         private void programmerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("By Fava Tony");
@@ -196,26 +230,41 @@ namespace BlackJack
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            axWindowsMediaPlayer1.URL = @"C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\song\1.mp3";
+            axWindowsMediaPlayer1.Visible = false;
             
+        }
+        public void Scommessa()
+        {
+            if (lblmontUT.Text == "0")
+            {
+                btnrisult.Enabled = true;
+                btnChiama.Enabled = true;
+                
+            }
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public void PrimaManoDelair()
         {
-
             b1 = mazzo.Next(1, 11);
             b2 = mazzo.Next(1, 11);
             punteggiodelar = b1 + b2;
             lblDealer1m.Text = b1.ToString();
             lblDealer2m.Text = b2.ToString();
             lblrisultatodelar.Text = punteggiodelar.ToString();
-            if (punteggiodelar < 16)
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PrimaManoDelair();
+             if (punteggiodelar < 16)
             {
                 b3 = mazzo.Next(1, 11);
                 lblDealer3m.Text = b3.ToString();
                 punteggiodelar += b3;
                 lblrisultatodelar.Text = punteggiodelar.ToString();
             }
+
            if (punteggiodelar < 16)
            {
                     b4 = mazzo.Next(1, 11);
@@ -281,6 +330,7 @@ namespace BlackJack
         public string ResetValue(Label a)
         {
             return a.Text="0";
+
         }
     }
 }
