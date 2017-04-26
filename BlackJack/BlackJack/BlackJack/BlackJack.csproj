@@ -89,5 +89,61 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Img\Cuori\10c.PNG" />
+    <Content Include="Img\Cuori\1c.PNG" />
+    <Content Include="Img\Cuori\2c.PNG" />
+    <Content Include="Img\Cuori\3c.PNG" />
+    <Content Include="Img\Cuori\4c.PNG" />
+    <Content Include="Img\Cuori\5c.PNG" />
+    <Content Include="Img\Cuori\6c.PNG" />
+    <Content Include="Img\Cuori\7c.PNG" />
+    <Content Include="Img\Cuori\8c.PNG" />
+    <Content Include="Img\Cuori\9c.PNG" />
+    <Content Include="Img\cartacoperta.PNG" />
+    <Content Include="Img\Cuori\jc.PNG" />
+    <Content Include="Img\Cuori\kc.PNG" />
+    <Content Include="Img\Fiori\10f.PNG" />
+    <Content Include="Img\Fiori\2f.PNG" />
+    <Content Include="Img\Fiori\3f.PNG" />
+    <Content Include="Img\Fiori\4f.PNG" />
+    <Content Include="Img\Fiori\5f.PNG" />
+    <Content Include="Img\Fiori\6f.PNG" />
+    <Content Include="Img\Fiori\7f.PNG" />
+    <Content Include="Img\Fiori\8f.PNG" />
+    <Content Include="Img\Fiori\9f.PNG" />
+    <Content Include="Img\Fiori\Assof.PNG" />
+    <Content Include="Img\Fiori\jf.PNG" />
+    <Content Include="Img\Fiori\kf.PNG" />
+    <Content Include="Img\Fiori\qf.PNG" />
+    <Content Include="Img\Logo.jpg" />
+    <Content Include="Img\Cuori\qc.PNG" />
+    <Content Include="Img\Picche\10p.PNG" />
+    <Content Include="Img\Picche\1p.PNG" />
+    <Content Include="Img\Picche\2p.PNG" />
+    <Content Include="Img\Picche\3p.PNG" />
+    <Content Include="Img\Picche\4p.PNG" />
+    <Content Include="Img\Picche\5p.PNG" />
+    <Content Include="Img\Picche\6p.PNG" />
+    <Content Include="Img\Picche\7p.PNG" />
+    <Content Include="Img\Picche\8p.PNG" />
+    <Content Include="Img\Picche\9p.PNG" />
+    <Content Include="Img\Picche\jp.PNG" />
+    <Content Include="Img\Picche\kp.PNG" />
+    <Content Include="Img\Picche\qp.PNG" />
+    <Content Include="Img\Quadri\10q.PNG" />
+    <Content Include="Img\Quadri\1q.PNG" />
+    <Content Include="Img\Quadri\2q.PNG" />
+    <Content Include="Img\Quadri\3c.PNG" />
+    <Content Include="Img\Quadri\4c.PNG" />
+    <Content Include="Img\Quadri\5c.PNG" />
+    <Content Include="Img\Quadri\6c.PNG" />
+    <Content Include="Img\Quadri\7q.PNG" />
+    <Content Include="Img\Quadri\8q.PNG" />
+    <Content Include="Img\Quadri\9q.PNG" />
+    <Content Include="Img\Quadri\jq.PNG" />
+    <Content Include="Img\Quadri\kq.PNG" />
+    <Content Include="Img\Quadri\qq.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

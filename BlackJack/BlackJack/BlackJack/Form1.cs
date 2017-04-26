@@ -82,7 +82,7 @@ namespace BlackJack
             if (lblplayer1m.Text == "1")
             {
 
-                pictureBox7.ImageLocation = @"C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\Img\Cuori\1c.png";
+                pictureBox7.ImageLocation = @"Img\Cuori\1c.png";
             }
             if (lblplayer1m.Text == "2")
             {
