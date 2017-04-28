@@ -1,0 +1,20 @@
+C:\Users\tony\Desktop\Progetto APP\Nuova cartella\ClassBookingwpf\tris2\tris2\bin\Debug\tris2.exe.config
+C:\Users\tony\Desktop\Progetto APP\Nuova cartella\ClassBookingwpf\tris2\tris2\bin\Debug\tris2.exe
+C:\Users\tony\Desktop\Progetto APP\Nuova cartella\ClassBookingwpf\tris2\tris2\bin\Debug\tris2.pdb
+C:\Users\tony\Desktop\Progetto APP\Nuova cartella\ClassBookingwpf\tris2\tris2\obj\Debug\tris2.csprojResolveAssemblyReference.cache
+C:\Users\tony\Desktop\Progetto APP\Nuova cartella\ClassBookingwpf\tris2\tris2\obj\Debug\tris2.Form1.resources
+C:\Users\tony\Desktop\Progetto APP\Nuova cartella\ClassBookingwpf\tris2\tris2\obj\Debug\tris2.Properties.Resources.resources
+C:\Users\tony\Desktop\Progetto APP\Nuova cartella\ClassBookingwpf\tris2\tris2\obj\Debug\tris2.csproj.GenerateResource.Cache
+C:\Users\tony\Desktop\Progetto APP\Nuova cartella\ClassBookingwpf\tris2\tris2\obj\Debug\tris2.exe
+C:\Users\tony\Desktop\Progetto APP\Nuova cartella\ClassBookingwpf\tris2\tris2\obj\Debug\tris2.pdb
+C:\Users\tony\Desktop\Progetto APP\Nuova cartella\ClassBookingwpf\tris2\tris2\obj\Debug\tris2.Inizio.resources
+C:\Users\favat\Desktop\tris2\tris2\bin\Debug\tris2.exe.config
+C:\Users\favat\Desktop\tris2\tris2\obj\Debug\tris2.exe
+C:\Users\favat\Desktop\tris2\tris2\obj\Debug\tris2.pdb
+C:\Users\favat\Desktop\tris2\tris2\bin\Debug\tris2.exe
+C:\Users\favat\Desktop\tris2\tris2\bin\Debug\tris2.pdb
+C:\Users\favat\Desktop\tris2\tris2\obj\Debug\tris2.csprojResolveAssemblyReference.cache
+C:\Users\favat\Desktop\tris2\tris2\obj\Debug\tris2.Form1.resources
+C:\Users\favat\Desktop\tris2\tris2\obj\Debug\tris2.Inizio.resources
+C:\Users\favat\Desktop\tris2\tris2\obj\Debug\tris2.Properties.Resources.resources
+C:\Users\favat\Desktop\tris2\tris2\obj\Debug\tris2.csproj.GenerateResource.Cache
