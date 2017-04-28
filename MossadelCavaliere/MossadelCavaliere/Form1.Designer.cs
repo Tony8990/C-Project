@@ -70,6 +70,7 @@
             this.Controls.Add(this.buttonstart);
             this.Name = "Form1";
             this.Text = "mossa del cavaliere";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

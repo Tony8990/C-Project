@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Web.Script.Serialization;
+using System.Xml.Serialization;
 namespace Traduttore_Json
 {
     public partial class Form1 : Form
@@ -95,6 +96,11 @@ namespace Traduttore_Json
 
             }).OrderBy(m => m.IdMatch).ToList();
           
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

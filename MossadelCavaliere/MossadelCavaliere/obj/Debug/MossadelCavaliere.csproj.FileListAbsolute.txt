@@ -1,0 +1,9 @@
+C:\Users\favat\Desktop\reposetory\C-Project\MossadelCavaliere\MossadelCavaliere\bin\Debug\MossadelCavaliere.exe.config
+C:\Users\favat\Desktop\reposetory\C-Project\MossadelCavaliere\MossadelCavaliere\bin\Debug\MossadelCavaliere.exe
+C:\Users\favat\Desktop\reposetory\C-Project\MossadelCavaliere\MossadelCavaliere\bin\Debug\MossadelCavaliere.pdb
+C:\Users\favat\Desktop\reposetory\C-Project\MossadelCavaliere\MossadelCavaliere\obj\Debug\MossadelCavaliere.csprojResolveAssemblyReference.cache
+C:\Users\favat\Desktop\reposetory\C-Project\MossadelCavaliere\MossadelCavaliere\obj\Debug\MossadelCavaliere.Form1.resources
+C:\Users\favat\Desktop\reposetory\C-Project\MossadelCavaliere\MossadelCavaliere\obj\Debug\MossadelCavaliere.Properties.Resources.resources
+C:\Users\favat\Desktop\reposetory\C-Project\MossadelCavaliere\MossadelCavaliere\obj\Debug\MossadelCavaliere.csproj.GenerateResource.Cache
+C:\Users\favat\Desktop\reposetory\C-Project\MossadelCavaliere\MossadelCavaliere\obj\Debug\MossadelCavaliere.exe
+C:\Users\favat\Desktop\reposetory\C-Project\MossadelCavaliere\MossadelCavaliere\obj\Debug\MossadelCavaliere.pdb

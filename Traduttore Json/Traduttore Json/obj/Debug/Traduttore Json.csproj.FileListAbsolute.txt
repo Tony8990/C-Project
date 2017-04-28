@@ -9,3 +9,6 @@ c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore J
 c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\obj\Debug\Traduttore Json.csproj.GenerateResource.Cache
 c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\obj\Debug\Traduttore Json.exe
 c:\users\tony\documents\visual studio 2017\Projects\Traduttore Json\Traduttore Json\obj\Debug\Traduttore Json.pdb
+C:\Users\favat\Desktop\reposetory\C-Project\Traduttore Json\Traduttore Json\bin\Debug\Traduttore Json.exe.config
+C:\Users\favat\Desktop\reposetory\C-Project\Traduttore Json\Traduttore Json\obj\Debug\Traduttore Json.exe
+C:\Users\favat\Desktop\reposetory\C-Project\Traduttore Json\Traduttore Json\obj\Debug\Traduttore Json.pdb
