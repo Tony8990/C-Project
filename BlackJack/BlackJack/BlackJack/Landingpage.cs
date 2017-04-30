@@ -22,9 +22,11 @@ namespace BlackJack
         private void btnStart_Click(object sender, EventArgs e)
         {
             nome = textBox1.Text;
-            Form1 a = new Form1(nome);
-            Song();
-            a.Show();
+            //Partita a = new Partita(nome);
+            Form1 b = new Form1(nome);
+            b.Show();
+            //Song();
+            //a.Show();
             this.Hide();           
             
             
@@ -43,3 +45,6 @@ namespace BlackJack
 
     }
 }
+
+
+

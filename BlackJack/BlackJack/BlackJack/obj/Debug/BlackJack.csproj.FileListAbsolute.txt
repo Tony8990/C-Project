@@ -13,3 +13,4 @@ C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\bi
 C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\Interop.WMPLib.dll
 C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.ResolveComReference.cache
+C:\Users\Tony\Desktop\Esercizi Scuola\C-Project\BlackJack\BlackJack\BlackJack\obj\Debug\BlackJack.Partita.resources
