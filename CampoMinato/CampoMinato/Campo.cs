@@ -91,8 +91,93 @@ namespace CampoMinato
 					};
 					this.Controls.Add(b);
 					Bottoni[i,j]=b;
-					//Delegato per la creazione dell evento
-					//b.Click +=
+					Delegato per la creazione dell evento
+						b.Click +=(object sender , EventArgs e)=>
+					{
+						if(!timer.IsRunning)
+						{
+							timer.Start();
+							
+							timerthread=new Thread(() =>
+							{
+							      while(true)
+							      {
+							      	if(timerLabel.InvokeRequired)
+							      	{
+							      		timerLabel.BeginInvoke((Action)(()=>
+							      		                                {
+							      		                                	TimeSpan t=TimeSpan.FromMilliseconds(timer.ElapsedMilliseconds);
+							      		                                	timerLabel.Text=string.Format("{0}:{1}:{2}",
+							      		                                	t.Minutes,
+							      		                                	t.Seconds,
+							      		                                	t.Milliseconds);
+							      		                                	
+							      		                                }));
+							      	}
+							      	else
+							      	{
+							      		TimeSpan t=TimeSpan.FromMilliseconds(timer.ElapsedMilliseconds);
+							      		timerLabel.Text=string.Format("{0}:{1}:{2}",
+							      		t.Minutes,
+							      	    t.Seconds,
+							      		t.Milliseconds);
+							      		                                	
+							      		
+							      		
+							      	}
+							      	Thread.Sleep(100);
+							      		                                	
+							      		                                
+							      	}
+				
+							      
+								});
+							
+                            
+							timerthread.Start();
+							}
+						Button bottoni2 =sender as Button;
+						Point posizione=(Point)bottoni2.Tag:
+						Bottoni[posizione.X,posizione.Y].BackColor=Color.Yellow;
+						int x=posizione.X;
+						int y=posizione.Y;
+						if(Bord[x,y])
+						{
+							timer.Stop();
+							timerthread.Abort();
+							MessageBox.Show("HAI PERSO !!");
+							this.Close();
+							
+						
+						
+							
+						}
+						List<int[]>ValoriC=new List<int[]>();
+						List<int[]>ValoriCtemp=new List<int[]>();
+						ValoriC.Add(nee int[]{x,y});
+						do
+						{
+							foreach(int[] pos in ValoriC)
+							{
+								if(Bottoni[pos[0],pos[1]].Enabled)
+								{
+									foreach(int[] comb in combinazioni)
+									{
+										int riga=comb[0]+pos[0];
+										int colon=come[1]+pos[1];
+										if(riga>=0&&colon>=0&&riga<dim.Y&&colon<dim.X&&Bombe[pos[0],pos[1]]==0)
+										{
+											ValoriCtemp.Add(new int []{riga,colon});
+										}
+									}
+									
+									
+								}
+								
+							}
+							
+						}
+					}
 				}
 				
 			}
