@@ -91,8 +91,7 @@ namespace CampoMinato
 					};
 					this.Controls.Add(b);
 					Bottoni[i,j]=b;
-					Delegato per la creazione dell evento
-						b.Click +=(object sender , EventArgs e)=>
+				    b.Click +=(object sender , EventArgs e)=>
 					{
 						if(!timer.IsRunning)
 						{
@@ -148,7 +147,7 @@ namespace CampoMinato
 							MessageBox.Show("HAI PERSO !!");
 							this.Close();
 							
-						
+						 
 						
 							
 						}
@@ -164,20 +163,71 @@ namespace CampoMinato
 									foreach(int[] comb in combinazioni)
 									{
 										int riga=comb[0]+pos[0];
-										int colon=come[1]+pos[1];
+										int colon=comb[1]+pos[1];
 										if(riga>=0&&colon>=0&&riga<dim.Y&&colon<dim.X&&Bombe[pos[0],pos[1]]==0)
 										{
 											ValoriCtemp.Add(new int []{riga,colon});
 										}
 									}
-									
-									
+									Bottoni[pos[0],pos[1]].Enabled=false;
+									Bottoni[pos[0],pos[1]].BackColor=Color.White;
+									if(Bombe[pos[0],pos[1]]>0)
+									{
+										Bottoni[pos[0],pos[1]].Text=Bombe[pos[0],pos[1]].ToString();
+										switch(Bombe[pos[0],pos[1]]-1)
+										{
+											case 0:
+										          Bottoni[pos[0],pos[1]].ForeColor=Color.Green;
+										          break;
+										    case 1:
+										          Bottoni[pos[0],pos[1]].ForeColor=Color.Red;
+										          break;
+										    case 2:
+										          Bottoni[pos[0],pos[1]].ForeColor=Color.Orange;
+										          break;
+										    case 3:
+										          Bottoni[pos[0],pos[1]].ForeColor=Color.DarkBlue;
+										          break;
+										    case 4:
+										          Bottoni[pos[0],pos[1]].ForeColor=Color.Brown;
+										          break;
+										    case 5:
+										          Bottoni[pos[0],pos[1]].ForeColor=Color.Cyan;
+										          break;
+										    case 6:
+										          Bottoni[pos[0],pos[1]].ForeColor=Color.Black;
+										          break;
+										    case 7:
+										          Bottoni[pos[0],pos[1]].ForeColor=Color.Gray;
+										          break;
+										    default:
+										          break;
+										}
+									}
+								
 								}
 								
 							}
 							
+							ValoriC=new List<int[]>(ValoriCtemp);
+							ValoriCtemp.Clear();
 						}
-					}
+						while(ValoriC.Count > 0);
+					};
+				    b.MouseUp +=(object sender,MouseEventArgs e)=>
+				    {
+				    	if(e.Button==MouseButtons.Right)
+				    	{
+				    		if(((Button)sender).BackColor==null)
+				    		{
+				    			//((Button)sender).BackgroundImage=path bandierina
+				    			if(countBombe==0)
+				    			{
+				    				string min=
+				    			}
+				    		}
+				    	}
+				    }
 				}
 				
 			}
