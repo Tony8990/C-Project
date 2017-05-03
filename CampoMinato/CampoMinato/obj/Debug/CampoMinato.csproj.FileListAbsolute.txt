@@ -10,3 +10,7 @@ C:\Users\Tony\Desktop\Esercizi Scuola\REPOSITORY\C-Project\CampoMinato\CampoMina
 C:\Users\Tony\Desktop\Esercizi Scuola\REPOSITORY\C-Project\CampoMinato\CampoMinato\obj\Debug\CampoMinato.csproj.GenerateResource.Cache
 C:\Users\Tony\Desktop\Esercizi Scuola\REPOSITORY\C-Project\CampoMinato\CampoMinato\obj\Debug\CampoMinato.exe
 C:\Users\Tony\Desktop\Esercizi Scuola\REPOSITORY\C-Project\CampoMinato\CampoMinato\obj\Debug\CampoMinato.Form1.resources
+C:\Users\Tony\Desktop\Esercizi Scuola\REPOSITORY\C-Project\CampoMinato\CampoMinato\obj\Debug\CampoMinato.Record.resources
+C:\Users\Tony\Desktop\Esercizi Scuola\REPOSITORY\C-Project\CampoMinato\CampoMinato\bin\Debug\CampoMinato.exe
+C:\Users\Tony\Desktop\Esercizi Scuola\REPOSITORY\C-Project\CampoMinato\CampoMinato\bin\Debug\CampoMinato.pdb
+C:\Users\Tony\Desktop\Esercizi Scuola\REPOSITORY\C-Project\CampoMinato\CampoMinato\obj\Debug\CampoMinato.pdb

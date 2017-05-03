@@ -29,8 +29,8 @@ namespace CampoMinato
 			Livello=lvl;
 			Tempo=tmp;
 			InitializeComponent();
-			CancelButton.Click += CancelButton_Click;
-            ApplyButton.Click += ApplyButton_Click;
+			CancelButton.Click += CancelButtonClick;
+            ApplyButton.Click += ApplyButtonClick;
             NameBox.KeyDown += NameBox_KeyDown;
             
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -51,7 +51,7 @@ namespace CampoMinato
 
             Thread t = new Thread(
                 new ThreadStart(
-                    () => Application.Run(new HighscoreForm(Livello))));
+            		() => Application.Run(new Record(Livello))));
 
             t.Start();
             t.Join();

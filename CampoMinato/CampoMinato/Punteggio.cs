@@ -19,7 +19,7 @@ namespace CampoMinato
 	/// Description of Punteggio.
 	/// </summary>
 	/// 
-	public class Punteggio
+	class Punteggio
 	{
 		int puntegioentri=10;
 		static Punteggio pri;
@@ -84,22 +84,29 @@ namespace CampoMinato
 			 	Tempo=t;
 			}
 			
-			public string UnRecord()
+			public string UnScore()
 			{
-				return string.Format("{0};{1};"+Environment.NewLine,Nome,Tempo)
+				return string.Format("{0};{1};"+Environment.NewLine,Nome,Tempo);
 			}
 			public string AsString()
 			{
-				return string.Format("{0} {1} "+Environment.NewLine,Nome,Tempo)
+				return string.Format("{0} {1} "+Environment.NewLine,Nome,Tempo);
 			}
-			public static Record Carica(string n)
+			public static Score Carica(string n)
 			{
-				string[] rec = n.Split(';')
-					return new Record(rec[0],rec[1]);
+				string[] rec = n.Split(';');
+				
+			   return new Score(rec[0],rec[1]);
 			}
 		}
-		List<Record> Punti;
+		List<Score> Punti;
 		string Livello;
+		~Punteggio()
+		{
+			File.WriteAllText("./Punteggio/"+Livello,string.Join("",Punti.Select(entry=>entry.UnScore())));
+			
+		}
+		
 		public Punteggio(int lvl)
 		{
 			switch(lvl)
@@ -126,19 +133,19 @@ namespace CampoMinato
 			if(!File.Exists("./Punteggio/"+Livello))
 				File.Create("./Punteggio/"+Livello).Close();
 			
-			Score=File.ReadAllLines("Punteggio/"+Livello).Select(line => Score.Carica(line)).Take(puntegioentri).ToList();
+			Punti=File.ReadAllLines("Punteggio/"+Livello).Select(line => Score.Carica(line)).Take(puntegioentri).ToList();
 			
 			
 		}
 		public bool Controlla()
 		{
-			return Score.Count > 0;
+			return Punti.Count > 0;
 		}
-		public string Ordina()
+		public string Tutti()
 		{
-			return string.Join("",Score.OrderBy(min =>
+			return string.Join("",Punti.OrderBy(min =>
 		   {
-		    int [] arg = min.Tempo.Split(':').Select(s=>int.TryParse(s)).ToArray();
+		    int [] arg = min.Tempo.Split(':').Select(s=>int.Parse(s)).ToArray();
 		    return arg[0]*60*1000+arg[1]*1000+arg[2]*10;
 			                                     }).Take(puntegioentri).Select((min,ind)=>string.Format("{0} {1,15} {2}"+Environment.NewLine,ind,min.Nome,min.Tempo)));
 			
@@ -146,15 +153,15 @@ namespace CampoMinato
 		}
 		public string Tempomin()
 		{
-			return Score.Count>=puntegioentri ? Score.Last().Tempo:"60:60:99";
+			return Punti.Count>=puntegioentri ? Punti.Last().Tempo:"60:60:99";
 			
 		}
 		public void Add(string nome,string tempo)
 		{
-			Score.Add(new Record(nome,tempo));
+			Punti.Add(new Score(nome,tempo));
 			
-			Score=Score.OrderBy(record=>{
-			                      	int[] arg = record.Tempo.Split(':').Select(s=> int.TryParse(s)).ToArray();
+			Punti=Punti.OrderBy(record=>{
+			                      	int[] arg = record.Tempo.Split(':').Select(s=> int.Parse(s)).ToArray();
 			                      	return arg[0]*60*1000+arg[1]*1000+arg[2]*10;
 			                      	
 			                      }).Take(puntegioentri).ToList();

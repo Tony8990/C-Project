@@ -50,6 +50,13 @@ namespace CampoMinato
 		#endregion
 		
 		int livello;
+		~Campo()
+		{
+			if(timerthread!=null)
+				timerthread.Abort();
+			
+			timer.Stop();
+		}
 		public Campo(Point dim)
 		{
 			
@@ -78,18 +85,19 @@ namespace CampoMinato
 				2*spazioattorno+dim.Y*DimBottoni+dim.Y*spaziotraiBtn+DimBottoni*2+mossaV);
 			this.FormBorderStyle= FormBorderStyle.Fixed3D;
 			this.MaximizeBox=false;
-			//oggetto da aggiungere
-			//Image Sfondobottoni=Image.FromFile();
+			this.MinimizeBox=false;
+			//Image Bandiera=Image.FromFile("Bandierina.png");
 			for(int i=0;i<dim.Y;i++)
 			{
-				for(int j=0;i<dim.X;j++){
+				for(int j=0;j<dim.X;j++){
 					Button b = new Button()
 					{
 						Tag=new Point(i,j),
 						Location=new Point(spazioattorno+i*DimBottoni+i*spaziotraiBtn+mossaO,spazioattorno+j*DimBottoni+j*spaziotraiBtn+mossaV),
 						Size=new Size(DimBottoni,DimBottoni),
-						BackColor=Color.Blue,
+						BackColor=Color.Blue
 					};
+					b.FlatStyle= FlatStyle.Flat;
 					this.Controls.Add(b);
 					Bottoni[i,j]=b;
 					b.Click +=(object sender , EventArgs e)=>
@@ -99,28 +107,28 @@ namespace CampoMinato
 							timer.Start();
 							
 							timerthread=new Thread(() =>
-							                       {
-							                       	while(true)
-							                       	{
-							                       		if(timerLabel.InvokeRequired)
-							                       		{
-							                       			timerLabel.BeginInvoke((Action)(()=>
-							                       			                                {
-							                       			                                	TimeSpan t=TimeSpan.FromMilliseconds(timer.ElapsedMilliseconds);
-							                       			                                	timerLabel.Text=string.Format("{0}:{1}:{2}",
-							                       			                                	                              t.Minutes,
-							                       			                                	                              t.Seconds,
-							                       			                                	                              t.Milliseconds);
+							{
+							 while(true)
+							 {
+							   if(timerLabel.InvokeRequired)
+							   {
+							   timerLabel.BeginInvoke((Action)(()=>
+							    {
+							     TimeSpan t=TimeSpan.FromMilliseconds(timer.ElapsedMilliseconds);
+							      timerLabel.Text=string.Format("{0:D2}:{1:D2}:{2:D2}",
+							       t.Minutes,
+							       t.Seconds,
+							       t.Milliseconds);
 							                       			                                	
-							                       			                                }));
-							                       		}
-							                       		else
-							                       		{
-							                       			TimeSpan t=TimeSpan.FromMilliseconds(timer.ElapsedMilliseconds);
-							                       			timerLabel.Text=string.Format("{0}:{1}:{2}",
-							                       			                              t.Minutes,
-							                       			                              t.Seconds,
-							                       			                              t.Milliseconds);
+							     }));
+							    }
+							    else
+							    {
+							     TimeSpan t=TimeSpan.FromMilliseconds(timer.ElapsedMilliseconds);
+							     timerLabel.Text=string.Format("{0:D2}:{1:D2}:{2:D2}",
+							                   t.Minutes,
+							                   t.Seconds,
+							                   t.Milliseconds);
 							                       			
 							                       			
 							                       			
@@ -136,9 +144,9 @@ namespace CampoMinato
 							
 							timerthread.Start();
 						}
-						Button bottoni2 =sender as Button;
-						Point posizione=(Point)bottoni2.Tag();
-							Bottoni[posizione.X,posizione.Y].BackColor=Color.Yellow;
+						Button bottoni =sender as Button;
+						Point posizione=(Point)bottoni.Tag;
+						Bottoni[posizione.X,posizione.Y].BackColor=Color.Yellow;
 						int x=posizione.X;
 						int y=posizione.Y;
 						if(Bord[x,y])
@@ -221,23 +229,24 @@ namespace CampoMinato
 						{
 							if(((Button)sender).BackColor==null)
 							{
-								((Button)sender).BackgroundImage=bandiera;
+								
+								((Button)sender).BackColor=Color.Red;
 								if(countBombe==0)
 								{
 									string min=Punteggio.ID(livello).Tempomin();
 									string[] sar=min.Split(':');
-									int[] arg=sar.Select(s=>int.TryParse(s)).ToArray();
+									int[] arg=sar.Select(s=>int.Parse(s)).ToArray();
 									
 									long T=timer.ElapsedMilliseconds;
 									int x=arg[0]*60*1000+arg[1]*1000+arg[2]*10;
 									bool tmp=true;
-									for(int i=0;i<dim.Y;i++)
+									for(int i_=0;i_<dim.Y;i_++)
 									{
-										for(int j=0;j<dim.X;j++)
+										for(int j_=0;j_<dim.X;j_++)
 										{
-											if(Bottoni[i,j].BackgroundImage!=null)
+											if(Bottoni[i_,j_].BackgroundImage!=null)
 											{
-												tmp=tmp&&Bord[i,j];
+												tmp=tmp&&Bord[i_,j_];
 											}
 										}
 										
@@ -248,7 +257,7 @@ namespace CampoMinato
 										timerthread.Abort();
 										timer.Stop();
 										var ts=TimeSpan.FromMilliseconds(T);
-										string s =string.Format("{0):{1}:{2}",ts.Minutes,ts.Seconds,ts.Milliseconds);
+										string s =string.Format("{0:D2}:{1:D2}:{2:D2}",ts.Minutes,ts.Seconds,ts.Milliseconds);
 										
 										Form1 fm =new Form1(livello,s);
 										Thread t =new Thread(new ThreadStart(()=>Application.Run(fm)));
@@ -273,24 +282,24 @@ namespace CampoMinato
 			
 			Label l1=new Label()
 			{
-				Text="Tony:",
+				Text="Gioca:",
 				Location=new Point(spazioattorno,spazioattorno)
 			};
 			timerLabel=new Label()
 			{
-				Text="boooo",
+				Text="Timer",
 				Location=new Point(spazioattorno+l1.Width,spazioattorno)
 					
 			};
 			Label l2 =new Label()
 			{
-				Text="Bombe :",
+				Text=countBombe.ToString(),
 				Location=new Point(spazioattorno+timerLabel.Width,spazioattorno+l1.Height)
 					
 			};
 			BombeRimaste=new Label()
 			{
-				Text=countBombe.ToString();
+				Text=countBombe.ToString(),
 				Location=new Point(spazioattorno+timerLabel.Width,spazioattorno+l1.Height)
 			};
 			this.Controls.Add(l2);
@@ -302,26 +311,28 @@ namespace CampoMinato
 			
 			do
 			{
-				for(int i =0;i<dim.Y&&countBombe>0;i++)
+				for(int _i =0;_i<dim.Y&&countBombe>0;_i++)
 				{
-					for(int j=0;j<dim.X&&countBombe>0;j++)
+					for(int _j=0;_j<dim.X&&countBombe>0;_j++)
 					{
-						if(rnb.Next(0,100)<probBombe&&!Bord[i,j]&&!combinazioni.All(cb=>
-						                                                            {
-						                                                            	int ia=cb[0]+ia,
-						                                                            	ja=cb[1]+ja;
-						                                                            	return ia>=0&&ia<dim.Y&&ja>=0&&ja<dim.X&&combinazioni.All(cbi=>
-						                                                            	                                                          {
-						                                                            	                                                          	int somia=ia+cbi[0],
-						                                                            	                                                          	somij=ja+cbi[1];
-						                                                            	                                                          	bool esplosa=somia != i && somij != j && somij>=0 && somij < dim.X &&somia>=0&&somia<dim.Y&& Bord[somia,somij];
-						                                                            	                                                          	return esplosa;
-						                                                            	                                                          });
+						if(rnb.Next(0,100)<probBombe&&!Bord[_i,_j]&&!combinazioni.Any(cb=>
+                        {
+						  int i=cb[0]+_i,
+						                             
+						  j=cb[1]+_j;
 						                                                            	
-						                                                            	{                                                           }))
-						                                                            		Bord[i,j]=true;
-						                                                            	countBombe--;
-						                                                            }
+						  return i>=0&&i<dim.Y&&j>=0&&j<dim.X&&combinazioni.All(cbi=>
+						  {
+						   int somia=i+cbi[0],
+						   somij=j+cbi[1];
+					    	bool esplosa=somia != i && somij != j && somij>=0 && somij < dim.X &&somia>=0&&somia<dim.Y&& Bord[somia,somij];
+	                       return esplosa;
+						  });
+						  }))
+						 {                                                        
+						 Bord[_i,_j]=true;
+						 countBombe--;
+						 }
 						}
 					
 				}
@@ -339,10 +350,10 @@ namespace CampoMinato
 						{
 							int ia=cb[0]+i;
 							int ja=cb[1]+j;
-							if(ia>=0&&ia<dim.Y&&ja>=0&&ja<dim.X&Bord[ia,ja])
-								countBombe++;
+							if(ia>=0&&ia<dim.Y&&ja>=0&&ja<dim.X&&Bord[ia,ja])
+								conto++;
 						}
-						BombeAttorno[i,j]=countBombe;
+						Bombe[i,j]=conto;
 					}
 					
 				}
