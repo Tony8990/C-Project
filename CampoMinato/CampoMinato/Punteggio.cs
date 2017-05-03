@@ -74,11 +74,11 @@ namespace CampoMinato
 			}
 			return null;
 		}
-		class Record
+		class Score
 		{
 			public string Nome;
 			public string Tempo;
-			public Record(string n,string t)
+			public Score(string n,string t)
 			{
 			 	Nome=n;
 			 	Tempo=t;
@@ -98,7 +98,7 @@ namespace CampoMinato
 					return new Record(rec[0],rec[1]);
 			}
 		}
-		List<Record> Record;
+		List<Record> Punti;
 		string Livello;
 		public Punteggio(int lvl)
 		{
@@ -126,17 +126,17 @@ namespace CampoMinato
 			if(!File.Exists("./Punteggio/"+Livello))
 				File.Create("./Punteggio/"+Livello).Close();
 			
-			Record=File.ReadAllLines("Punteggio/"+Livello).Select(line => Record.Carica(line)).Take(puntegioentri).ToList();
+			Score=File.ReadAllLines("Punteggio/"+Livello).Select(line => Score.Carica(line)).Take(puntegioentri).ToList();
 			
 			
 		}
 		public bool Controlla()
 		{
-			return Record.Count > 0;
+			return Score.Count > 0;
 		}
 		public string Ordina()
 		{
-			return string.Join("",Record.OrderBy(min =>
+			return string.Join("",Score.OrderBy(min =>
 		   {
 		    int [] arg = min.Tempo.Split(':').Select(s=>int.TryParse(s)).ToArray();
 		    return arg[0]*60*1000+arg[1]*1000+arg[2]*10;
@@ -146,14 +146,14 @@ namespace CampoMinato
 		}
 		public string Tempomin()
 		{
-			return Record.Count>=puntegioentri ? Record.Last().Tempo:"60:60:99";
+			return Score.Count>=puntegioentri ? Score.Last().Tempo:"60:60:99";
 			
 		}
 		public void Add(string nome,string tempo)
 		{
-			Record.Add(new Record(nome,tempo));
+			Score.Add(new Record(nome,tempo));
 			
-			Record=Record.OrderBy(record=>{
+			Score=Score.OrderBy(record=>{
 			                      	int[] arg = record.Tempo.Split(':').Select(s=> int.TryParse(s)).ToArray();
 			                      	return arg[0]*60*1000+arg[1]*1000+arg[2]*10;
 			                      	

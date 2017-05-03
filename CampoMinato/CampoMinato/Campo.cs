@@ -36,6 +36,7 @@ namespace CampoMinato
 		int probBombe = 10;
 		int mossaO=0;
 		int mossaV=50;
+		int[][] combinazioni = new int[][] { new int[2] { 1, 1 }, new int[2] { 1, 0 }, new int[2] { 1, -1 }, new int[2] { 0, 1 }, new int[2] { 0, -1 }, new int[2] { -1, 1 }, new int[2] { -1, 0 }, new int[2] { -1, -1 } };
 		#endregion
 		#region Variabili del gioco [bombe,bottoni,campo]
 		int[,] Bombe;
@@ -48,7 +49,7 @@ namespace CampoMinato
 		Label BombeRimaste;
 		#endregion
 		
-	    int livello;
+		int livello;
 		public Campo(Point dim)
 		{
 			
@@ -59,22 +60,22 @@ namespace CampoMinato
 			
 			switch(dim.X*dim.Y)
 			{
-					case 81 :
-						 livello =0;
-						 break;
-					case 256:
-						 livello =1;
-						 break;
-					case 480:
-						 livello =2;
-						 break;
-						default:
-						 break;
-						 
+				case 81 :
+					livello =0;
+					break;
+				case 256:
+					livello =1;
+					break;
+				case 480:
+					livello =2;
+					break;
+				default:
+					break;
+					
 			}
 			this.Size=new Size(
-			2*spazioattorno+dim.X*DimBottoni+dim.Y*spaziotraiBtn+DimBottoni+mossaO,
-			2*spazioattorno+dim.Y*DimBottoni+dim.Y*spaziotraiBtn+DimBottoni*2+mossaV);
+				2*spazioattorno+dim.X*DimBottoni+dim.Y*spaziotraiBtn+DimBottoni+mossaO,
+				2*spazioattorno+dim.Y*DimBottoni+dim.Y*spaziotraiBtn+DimBottoni*2+mossaV);
 			this.FormBorderStyle= FormBorderStyle.Fixed3D;
 			this.MaximizeBox=false;
 			//oggetto da aggiungere
@@ -91,53 +92,53 @@ namespace CampoMinato
 					};
 					this.Controls.Add(b);
 					Bottoni[i,j]=b;
-				    b.Click +=(object sender , EventArgs e)=>
+					b.Click +=(object sender , EventArgs e)=>
 					{
 						if(!timer.IsRunning)
 						{
 							timer.Start();
 							
 							timerthread=new Thread(() =>
-							{
-							      while(true)
-							      {
-							      	if(timerLabel.InvokeRequired)
-							      	{
-							      		timerLabel.BeginInvoke((Action)(()=>
-							      		                                {
-							      		                                	TimeSpan t=TimeSpan.FromMilliseconds(timer.ElapsedMilliseconds);
-							      		                                	timerLabel.Text=string.Format("{0}:{1}:{2}",
-							      		                                	t.Minutes,
-							      		                                	t.Seconds,
-							      		                                	t.Milliseconds);
-							      		                                	
-							      		                                }));
-							      	}
-							      	else
-							      	{
-							      		TimeSpan t=TimeSpan.FromMilliseconds(timer.ElapsedMilliseconds);
-							      		timerLabel.Text=string.Format("{0}:{1}:{2}",
-							      		t.Minutes,
-							      	    t.Seconds,
-							      		t.Milliseconds);
-							      		                                	
-							      		
-							      		
-							      	}
-							      	Thread.Sleep(100);
-							      		                                	
-							      		                                
-							      	}
-				
-							      
-								});
+							                       {
+							                       	while(true)
+							                       	{
+							                       		if(timerLabel.InvokeRequired)
+							                       		{
+							                       			timerLabel.BeginInvoke((Action)(()=>
+							                       			                                {
+							                       			                                	TimeSpan t=TimeSpan.FromMilliseconds(timer.ElapsedMilliseconds);
+							                       			                                	timerLabel.Text=string.Format("{0}:{1}:{2}",
+							                       			                                	                              t.Minutes,
+							                       			                                	                              t.Seconds,
+							                       			                                	                              t.Milliseconds);
+							                       			                                	
+							                       			                                }));
+							                       		}
+							                       		else
+							                       		{
+							                       			TimeSpan t=TimeSpan.FromMilliseconds(timer.ElapsedMilliseconds);
+							                       			timerLabel.Text=string.Format("{0}:{1}:{2}",
+							                       			                              t.Minutes,
+							                       			                              t.Seconds,
+							                       			                              t.Milliseconds);
+							                       			
+							                       			
+							                       			
+							                       		}
+							                       		Thread.Sleep(100);
+							                       		
+							                       		
+							                       	}
+							                       	
+							                       	
+							                       });
 							
-                            
+							
 							timerthread.Start();
-							}
+						}
 						Button bottoni2 =sender as Button;
-						Point posizione=(Point)bottoni2.Tag:
-						Bottoni[posizione.X,posizione.Y].BackColor=Color.Yellow;
+						Point posizione=(Point)bottoni2.Tag();
+							Bottoni[posizione.X,posizione.Y].BackColor=Color.Yellow;
 						int x=posizione.X;
 						int y=posizione.Y;
 						if(Bord[x,y])
@@ -147,13 +148,13 @@ namespace CampoMinato
 							MessageBox.Show("HAI PERSO !!");
 							this.Close();
 							
-						 
-						
+							
+							
 							
 						}
 						List<int[]>ValoriC=new List<int[]>();
 						List<int[]>ValoriCtemp=new List<int[]>();
-						ValoriC.Add(nee int[]{x,y});
+						ValoriC.Add(new int[]{x,y});
 						do
 						{
 							foreach(int[] pos in ValoriC)
@@ -177,34 +178,34 @@ namespace CampoMinato
 										switch(Bombe[pos[0],pos[1]]-1)
 										{
 											case 0:
-										          Bottoni[pos[0],pos[1]].ForeColor=Color.Green;
-										          break;
-										    case 1:
-										          Bottoni[pos[0],pos[1]].ForeColor=Color.Red;
-										          break;
-										    case 2:
-										          Bottoni[pos[0],pos[1]].ForeColor=Color.Orange;
-										          break;
-										    case 3:
-										          Bottoni[pos[0],pos[1]].ForeColor=Color.DarkBlue;
-										          break;
-										    case 4:
-										          Bottoni[pos[0],pos[1]].ForeColor=Color.Brown;
-										          break;
-										    case 5:
-										          Bottoni[pos[0],pos[1]].ForeColor=Color.Cyan;
-										          break;
-										    case 6:
-										          Bottoni[pos[0],pos[1]].ForeColor=Color.Black;
-										          break;
-										    case 7:
-										          Bottoni[pos[0],pos[1]].ForeColor=Color.Gray;
-										          break;
-										    default:
-										          break;
+												Bottoni[pos[0],pos[1]].ForeColor=Color.Green;
+												break;
+											case 1:
+												Bottoni[pos[0],pos[1]].ForeColor=Color.Red;
+												break;
+											case 2:
+												Bottoni[pos[0],pos[1]].ForeColor=Color.Orange;
+												break;
+											case 3:
+												Bottoni[pos[0],pos[1]].ForeColor=Color.DarkBlue;
+												break;
+											case 4:
+												Bottoni[pos[0],pos[1]].ForeColor=Color.Brown;
+												break;
+											case 5:
+												Bottoni[pos[0],pos[1]].ForeColor=Color.Cyan;
+												break;
+											case 6:
+												Bottoni[pos[0],pos[1]].ForeColor=Color.Black;
+												break;
+											case 7:
+												Bottoni[pos[0],pos[1]].ForeColor=Color.Gray;
+												break;
+											default:
+												break;
 										}
 									}
-								
+									
 								}
 								
 							}
@@ -214,47 +215,136 @@ namespace CampoMinato
 						}
 						while(ValoriC.Count > 0);
 					};
-				    b.MouseUp +=(object sender,MouseEventArgs e)=>
-				    {
-				    	if(e.Button==MouseButtons.Right)
-				    	{
-				    		if(((Button)sender).BackColor==null)
-				    		{
-				    			((Button)sender).BackgroundImage=bandiera;
-				    			if(countBombe==0)
-				    			{
-				    				string min=Punteggio.ID(livello).Tempomin();
-				    				string[] sar=min.Split(':');
-				    				int[] arg=sar.Select(s=>int.TryParse(s)).ToArray();
-				    				
-				    				long T=timer.ElapsedMilliseconds;
-				    				int x=arg[0]*60*1000+arg[1]*1000+arg[2]*10;
-				    				bool tmp=true;
-				    				for(int i=0;i<dim.Y;i++)
-				    				{
-				    					for(int j=0;j<dim.X;j++)
-				    					{
-				    						if(Bottoni[i,j].BackgroundImage!=null)
-				    						{
-				    							tmp=tmp&&Bord[i,j];
-				    						}
-				    					}
-				    					
-				    				}
-				    				if(tmp && T > x)
-				    				{
-				    					this.Hide();
-				    					timerthread.Abort();
-				    					timer.Stop();
-				    					var ts=TimeSpan.FromMilliseconds(T);
-				    					string s =string.Format("{0):{1}:{2}",ts.Minutes,ts.Seconds,ts.Milliseconds);
-				    					
-				    					
-				    				}
-				    			}
-				    		}
-				    	}
-				    }
+					b.MouseUp +=(object sender,MouseEventArgs e)=>
+					{
+						if(e.Button==MouseButtons.Right)
+						{
+							if(((Button)sender).BackColor==null)
+							{
+								((Button)sender).BackgroundImage=bandiera;
+								if(countBombe==0)
+								{
+									string min=Punteggio.ID(livello).Tempomin();
+									string[] sar=min.Split(':');
+									int[] arg=sar.Select(s=>int.TryParse(s)).ToArray();
+									
+									long T=timer.ElapsedMilliseconds;
+									int x=arg[0]*60*1000+arg[1]*1000+arg[2]*10;
+									bool tmp=true;
+									for(int i=0;i<dim.Y;i++)
+									{
+										for(int j=0;j<dim.X;j++)
+										{
+											if(Bottoni[i,j].BackgroundImage!=null)
+											{
+												tmp=tmp&&Bord[i,j];
+											}
+										}
+										
+									}
+									if(tmp && T > x)
+									{
+										this.Hide();
+										timerthread.Abort();
+										timer.Stop();
+										var ts=TimeSpan.FromMilliseconds(T);
+										string s =string.Format("{0):{1}:{2}",ts.Minutes,ts.Seconds,ts.Milliseconds);
+										
+										Form1 fm =new Form1(livello,s);
+										Thread t =new Thread(new ThreadStart(()=>Application.Run(fm)));
+										t.Start();
+										t.Join();
+										this.Close();
+									}
+								}
+							}
+							else
+							{
+								((Button)sender).BackgroundImage=null;
+								countBombe++;
+							}
+							BombeRimaste.Text=countBombe.ToString();
+						}
+					};
+				}
+				
+			}
+			int bombeconto=countBombe=((dim.X*dim.Y)*probBombe)/100;
+			
+			Label l1=new Label()
+			{
+				Text="Tony:",
+				Location=new Point(spazioattorno,spazioattorno)
+			};
+			timerLabel=new Label()
+			{
+				Text="boooo",
+				Location=new Point(spazioattorno+l1.Width,spazioattorno)
+					
+			};
+			Label l2 =new Label()
+			{
+				Text="Bombe :",
+				Location=new Point(spazioattorno+timerLabel.Width,spazioattorno+l1.Height)
+					
+			};
+			BombeRimaste=new Label()
+			{
+				Text=countBombe.ToString();
+				Location=new Point(spazioattorno+timerLabel.Width,spazioattorno+l1.Height)
+			};
+			this.Controls.Add(l2);
+			this.Controls.Add(l1);
+			this.Controls.Add(timerLabel);
+			this.Controls.Add(BombeRimaste);
+			
+			Random rnb = new Random();
+			
+			do
+			{
+				for(int i =0;i<dim.Y&&countBombe>0;i++)
+				{
+					for(int j=0;j<dim.X&&countBombe>0;j++)
+					{
+						if(rnb.Next(0,100)<probBombe&&!Bord[i,j]&&!combinazioni.All(cb=>
+						                                                            {
+						                                                            	int ia=cb[0]+ia,
+						                                                            	ja=cb[1]+ja;
+						                                                            	return ia>=0&&ia<dim.Y&&ja>=0&&ja<dim.X&&combinazioni.All(cbi=>
+						                                                            	                                                          {
+						                                                            	                                                          	int somia=ia+cbi[0],
+						                                                            	                                                          	somij=ja+cbi[1];
+						                                                            	                                                          	bool esplosa=somia != i && somij != j && somij>=0 && somij < dim.X &&somia>=0&&somia<dim.Y&& Bord[somia,somij];
+						                                                            	                                                          	return esplosa;
+						                                                            	                                                          });
+						                                                            	
+						                                                            	{                                                           }))
+						                                                            		Bord[i,j]=true;
+						                                                            	countBombe--;
+						                                                            }
+						}
+					
+				}
+			}
+			while(countBombe>0);
+			
+			for(int i = 0;i<dim.Y;i++)
+			{
+				for(int j=0;j<dim.X;j++)
+				{
+					if(!Bord[i,j])
+					{
+						int conto=0;
+						foreach(int[]cb in combinazioni)
+						{
+							int ia=cb[0]+i;
+							int ja=cb[1]+j;
+							if(ia>=0&&ia<dim.Y&&ja>=0&&ja<dim.X&Bord[ia,ja])
+								countBombe++;
+						}
+						BombeAttorno[i,j]=countBombe;
+					}
+					
 				}
 				
 			}
