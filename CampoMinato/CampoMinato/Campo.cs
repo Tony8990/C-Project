@@ -220,10 +220,37 @@ namespace CampoMinato
 				    	{
 				    		if(((Button)sender).BackColor==null)
 				    		{
-				    			((Button)sender).BackgroundImage=path bandierina
+				    			((Button)sender).BackgroundImage=bandiera;
 				    			if(countBombe==0)
 				    			{
-				    				//string min=
+				    				string min=Punteggio.ID(livello).Tempomin();
+				    				string[] sar=min.Split(':');
+				    				int[] arg=sar.Select(s=>int.TryParse(s)).ToArray();
+				    				
+				    				long T=timer.ElapsedMilliseconds;
+				    				int x=arg[0]*60*1000+arg[1]*1000+arg[2]*10;
+				    				bool tmp=true;
+				    				for(int i=0;i<dim.Y;i++)
+				    				{
+				    					for(int j=0;j<dim.X;j++)
+				    					{
+				    						if(Bottoni[i,j].BackgroundImage!=null)
+				    						{
+				    							tmp=tmp&&Bord[i,j];
+				    						}
+				    					}
+				    					
+				    				}
+				    				if(tmp && T > x)
+				    				{
+				    					this.Hide();
+				    					timerthread.Abort();
+				    					timer.Stop();
+				    					var ts=TimeSpan.FromMilliseconds(T);
+				    					string s =string.Format("{0):{1}:{2}",ts.Minutes,ts.Seconds,ts.Milliseconds);
+				    					
+				    					
+				    				}
 				    			}
 				    		}
 				    	}
