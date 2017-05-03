@@ -220,10 +220,10 @@ namespace CampoMinato
 				    	{
 				    		if(((Button)sender).BackColor==null)
 				    		{
-				    			//((Button)sender).BackgroundImage=path bandierina
+				    			((Button)sender).BackgroundImage=path bandierina
 				    			if(countBombe==0)
 				    			{
-				    				string min=
+				    				//string min=
 				    			}
 				    		}
 				    	}

@@ -74,8 +74,91 @@ namespace CampoMinato
 			}
 			return null;
 		}
-		public Punteggio()
+		class Record
 		{
+			public string Nome;
+			public string Tempo;
+			public Record(string n,string t)
+			{
+			 	Nome=n;
+			 	Tempo=t;
+			}
+			
+			public string UnRecord()
+			{
+				return string.Format("{0};{1};"+Environment.NewLine,Nome,Tempo)
+			}
+			public string AsString()
+			{
+				return string.Format("{0} {1} "+Environment.NewLine,Nome,Tempo)
+			}
+			public static Record Carica(string n)
+			{
+				string[] rec = n.Split(';')
+					return new Record(rec[0],rec[1]);
+			}
 		}
+		List<Record> Record;
+		string Livello;
+		public Punteggio(int lvl)
+		{
+			switch(lvl)
+			{
+				case 0:
+					Livello="Principiante";
+					break;
+					
+				case 1:
+					Livello="Normale";
+					break;
+				
+				case 2:
+					Livello="Esperto";
+					break;
+				default:
+					break;
+					
+					
+			}
+			if(!Directory.Exists("./Punteggio"))
+				Directory.CreateDirectory("./Punteggio");
+			
+			if(!File.Exists("./Punteggio/"+Livello))
+				File.Create("./Punteggio/"+Livello).Close();
+			
+			Record=File.ReadAllLines("Punteggio/"+Livello).Select(line => Record.Carica(line)).Take(puntegioentri).ToList();
+			
+			
+		}
+		public bool Controlla()
+		{
+			return Record.Count > 0;
+		}
+		public string Ordina()
+		{
+			return string.Join("",Record.OrderBy(min =>
+		   {
+		    int [] arg = min.Tempo.Split(':').Select(s=>int.TryParse(s)).ToArray();
+		    return arg[0]*60*1000+arg[1]*1000+arg[2]*10;
+			                                     }).Take(puntegioentri).Select((min,ind)=>string.Format("{0} {1,15} {2}"+Environment.NewLine,ind,min.Nome,min.Tempo)));
+			
+			
+		}
+		public string Tempomin()
+		{
+			return Record.Count>=puntegioentri ? Record.Last().Tempo:"60:60:99";
+			
+		}
+		public void Add(string nome,string tempo)
+		{
+			Record.Add(new Record(nome,tempo));
+			
+			Record=Record.OrderBy(record=>{
+			                      	int[] arg = record.Tempo.Split(':').Select(s=> int.TryParse(s)).ToArray();
+			                      	return arg[0]*60*1000+arg[1]*1000+arg[2]*10;
+			                      	
+			                      }).Take(puntegioentri).ToList();
+		}
+		
 	}
 }
