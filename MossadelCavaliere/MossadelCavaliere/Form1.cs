@@ -17,6 +17,7 @@ namespace MossadelCavaliere
             InitializeComponent();
         }
         int bordersize;
+        int Triedmove;
         private void buttonstart_Click(object sender, EventArgs e)
         {
             try
@@ -41,6 +42,7 @@ namespace MossadelCavaliere
             MarckMove(board, CurrentPoisition, ref doneMoves);
 
             MoveHorse(board, CurrentPoisition, doneMoves);
+            
 
         }
 
