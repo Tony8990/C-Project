@@ -144,7 +144,13 @@ namespace tris2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            axWindowsMediaPlayer1.URL = @"C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\Song\Scooter - Fire [HQ].mp3";
+            axWindowsMediaPlayer1.Visible = false;
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+            
         }
     }
     }

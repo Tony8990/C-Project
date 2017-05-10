@@ -18,3 +18,13 @@ C:\Users\favat\Desktop\tris2\tris2\obj\Debug\tris2.Form1.resources
 C:\Users\favat\Desktop\tris2\tris2\obj\Debug\tris2.Inizio.resources
 C:\Users\favat\Desktop\tris2\tris2\obj\Debug\tris2.Properties.Resources.resources
 C:\Users\favat\Desktop\tris2\tris2\obj\Debug\tris2.csproj.GenerateResource.Cache
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\bin\Debug\tris2.exe.config
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\bin\Debug\tris2.exe
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\bin\Debug\tris2.pdb
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\tris2.csprojResolveAssemblyReference.cache
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\tris2.Form1.resources
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\tris2.Inizio.resources
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\tris2.Properties.Resources.resources
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\tris2.csproj.GenerateResource.Cache
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\tris2.exe
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\tris2.pdb
