@@ -87,6 +87,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Landingpage";
             this.Text = "Landingpage";
+            this.Load += new System.EventHandler(this.Landingpage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

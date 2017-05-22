@@ -28,3 +28,8 @@ C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\tris2.Propertie
 C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\tris2.csproj.GenerateResource.Cache
 C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\tris2.exe
 C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\tris2.pdb
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\bin\Debug\Interop.WMPLib.dll
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\Interop.WMPLib.dll
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Tony\Desktop\Repository\C-Project\tris2\tris2\obj\Debug\tris2.csproj.ResolveComReference.cache

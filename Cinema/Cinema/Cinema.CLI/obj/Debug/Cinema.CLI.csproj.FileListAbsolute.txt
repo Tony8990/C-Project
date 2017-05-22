@@ -1,0 +1,10 @@
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\Cinema.CLI\bin\Debug\Cinema.CLI.exe.config
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\Cinema.CLI\bin\Debug\Cinema.CLI.exe
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\Cinema.CLI\bin\Debug\Cinema.CLI.pdb
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\Cinema.CLI\bin\Debug\Cinema.dll
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\Cinema.CLI\bin\Debug\Cinema.pdb
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\Cinema.CLI\obj\Debug\Cinema.CLI.csprojResolveAssemblyReference.cache
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\Cinema.CLI\obj\Debug\Cinema.CLI.exe
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\Cinema.CLI\obj\Debug\Cinema.CLI.pdb
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\Cinema.CLI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\Cinema.CLI\bin\Debug\Newtonsoft.Json.xml

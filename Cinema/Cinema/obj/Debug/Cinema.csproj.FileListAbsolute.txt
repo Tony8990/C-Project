@@ -3,3 +3,10 @@ c:\users\tony\documents\visual studio 2017\Projects\Cinema\Cinema\bin\Debug\Cine
 c:\users\tony\documents\visual studio 2017\Projects\Cinema\Cinema\obj\Debug\Cinema.csprojResolveAssemblyReference.cache
 c:\users\tony\documents\visual studio 2017\Projects\Cinema\Cinema\obj\Debug\Cinema.dll
 c:\users\tony\documents\visual studio 2017\Projects\Cinema\Cinema\obj\Debug\Cinema.pdb
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\bin\Debug\Cinema.dll
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\bin\Debug\Cinema.pdb
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\obj\Debug\Cinema.csprojResolveAssemblyReference.cache
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\obj\Debug\Cinema.dll
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\obj\Debug\Cinema.pdb
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tony\Desktop\Repository\C-Project\Cinema\Cinema\bin\Debug\Newtonsoft.Json.xml

@@ -43,6 +43,10 @@ namespace BlackJack
 
         }
 
+        private void Landingpage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
