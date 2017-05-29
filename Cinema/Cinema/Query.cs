@@ -14,4 +14,5 @@ namespace Cinema.Classes
 
         public Dictionary<string,Page> Pages { get; set; }
     }
+    
 }

@@ -10,9 +10,9 @@ namespace Cinema.Classes
     public class Page
     {
         [DataMember (Name = "pageId")]
-        public int Id { get; set; }
+        public int PageId { get; set; }
         [DataMember(Name = "fullurl")]
-        public string Url { get; set; }
+        public string FullUrl { get; set; }
 
     }
 }

@@ -1,11 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.10
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema", "Cinema\Cinema.csproj", "{38759E53-26A2-4585-92CB-7262EFA8116B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.CLI", "Cinema\Cinema.CLI\Cinema.CLI.csproj", "{0A7F2364-B61A-4ED1-AB11-86B1E8347240}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CinemaWeb(1)", "CinemaWeb\", "{DD351E05-25FC-49CA-A153-0F18FC49D2CF}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{38759e53-26a2-4585-92cb-7262efa8116b}|Cinema.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49529"
+		Debug.AspNetCompiler.PhysicalPath = "CinemaWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49529\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49529"
+		Release.AspNetCompiler.PhysicalPath = "CinemaWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49529\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49529"
+		SlnRelativePath = "CinemaWeb\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +44,10 @@ Global
 		{0A7F2364-B61A-4ED1-AB11-86B1E8347240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A7F2364-B61A-4ED1-AB11-86B1E8347240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A7F2364-B61A-4ED1-AB11-86B1E8347240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD351E05-25FC-49CA-A153-0F18FC49D2CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD351E05-25FC-49CA-A153-0F18FC49D2CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD351E05-25FC-49CA-A153-0F18FC49D2CF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD351E05-25FC-49CA-A153-0F18FC49D2CF}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

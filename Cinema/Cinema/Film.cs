@@ -10,8 +10,11 @@ namespace Cinema.Classes
     public class Film {
         [DataMember(Name = "title")]
         public string Title { get; set; }
+
         public FilmGenre Genre { get; set; }
+
         public int Duration { get; set; }
+
         //public bool Is3D { get; set; }
         [DataMember (Name="release_year")]
         public int ReleaseYear { get; set; }
